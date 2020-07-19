@@ -8,6 +8,7 @@
 | 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular) |
 | 3   | [Que es TypeScript?](#que-es-typescript) |
 | 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular) |
+| 5   | [Que es un Directive?](#que-es-un-directive) |
 
 1. ### Que es Angular?
 
@@ -61,5 +62,28 @@
    3. Template: Representa una vista en una aplicación Angular
    4. Services: Se usa para crear componentes que pueden ser compartidos a través de toda la aplicación
    5. Metadata: Pueden ser usadas para agregar mas datos a una clase de Angular
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+5. ### Que es un Directive?
+
+   Los directive añaden comportamiento un elementos existentes en el DOM o a una instancia de componente existente
+
+   ```ts
+   import { Directive, ElementRef, Input } from '@angular/core';
+
+   @Directive({ selector: '[myHighlight]' })
+   export class HighlightDirective {
+   	constructor(el: ElementRef) {
+   		el.nativeElement.style.backgroundColor = 'yellow';
+     }
+   }
+   ```
+
+   Esta directive extiende el comportamiento del elemento HTML con un fondo amarillo
+
+   ```html
+   <p myHighlight>Highlight me!</p>
+   ```
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
