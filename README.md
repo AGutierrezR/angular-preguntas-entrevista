@@ -87,3 +87,25 @@
    ```
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+6. ### Que es un Component?
+
+   Los Components son los bloques de construcción de UI mas básicos en una aplicación Angular que formaba un árbol de componentes Angular. Estos componentes son un subconjunto de los directives. A diferencia de los directive, los componentes siempre tendrán una plantilla y solo se puede crear una instancia de un componente por elemento en un template. Aquí un simple ejemplo de un componente de Angular:
+
+   ```ts
+   import { Component } from '@angular/core';
+
+   @Component ({
+   	selector: 'my-app',
+   	template: ` <div>
+   		<h1>{{title}}</h1>
+   		<div>Learn Angular6 with examples</div>
+   	</div> `,
+   })
+
+   export class AppComponent {
+   	title: string = 'Welcome to Angular world';
+   }
+   ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
