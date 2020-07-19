@@ -7,6 +7,7 @@
 | 1   | [Que es Angular?](#que-es-angular)                                                                   |
 | 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular) |
 | 3   | [Que es TypeScript?](#que-es-typescript) |
+| 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular) |
 
 1. ### Que es Angular?
 
@@ -50,5 +51,15 @@
    ```
 
    El metodo `greeter` solo permite un argumento de tipo string
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+4. ### Cuales son los componentes claves de Angular?
+
+   1. Component: Son los bloque de construcción basicos de una aplication angular para controlar las vistas HTML.
+   2. Modules: En angular un modulo es un conjunto de bloques de construcción basicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
+   3. Template: Representa una vista en una aplicación Angular
+   4. Services: Se usa para crear componentes que pueden ser compartidos a través de toda la aplicación
+   5. Metadata: Pueden ser usadas para agregar mas datos a una clase de Angular
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
