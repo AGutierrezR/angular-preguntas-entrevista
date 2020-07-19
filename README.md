@@ -2,10 +2,11 @@
 
 ### Tabla de Contenido
 
-| No. | Preguntas                          |
-| --- | ---------------------------------- |
-| 1   | [Que es Angular?](#que-es-angular) |
+| No. | Preguntas                                                                                            |
+| --- | ---------------------------------------------------------------------------------------------------- |
+| 1   | [Que es Angular?](#que-es-angular)                                                                   |
 | 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular) |
+| 3   | [Que es TypeScript?](#que-es-typescript) |
 
 1. ### Que es Angular?
 
@@ -29,3 +30,25 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+3. ### Que es TypeScript?
+
+   TypeScript es un subconjunto de JavaScript creado por Microsoft que agregar optional types, classes, async/await, y muchas otras características, y compila JavaScript plano. Angular esta construido completamente en TypeScript y se usa como lenguaje primario. Se puede instalar globalmente
+
+   ```shell
+   npm install -g typescript
+   ```
+
+   Un simple ejemplo de como se usa TypeScript
+
+   ```ts
+   function greeter(person: string) {
+   	return "Hello, " + person;
+   }
+
+   let user = "Sudheer";
+   document.body.innerHTML = greeter(user);
+   ```
+
+   El metodo `greeter` solo permite un argumento de tipo string
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
