@@ -198,3 +198,20 @@
    5. La opción `entryComponents` es el conjunto de componentes que de cargaran dinamicamente en el view
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+10. ### Cuales son los lifecycle hooks disponbles?
+
+   Las aplicaciones de Angular van por un conjunto de procesos o tiene ciclos de vida desde inicialización hasta el final de la aplicación.
+
+   Los ciclos de angular son:
+
+   1. **ngOnChanges**: Cuando un valor de una propiedad enlazada a datos cambia, se llama a este método.
+   2. **ngOnInit**: Es llamado siempre que ocurra la inicialización de un directive/component despues de que Angular muestra por primera vez las propiedades vinculada a los datos.
+   3. **ngDoCheck**: Este es para la detección y para para actuar sobre los cambios que Angular no puede o no detecta por si solo.
+   4. **ngAfterContentInit**: Es llamado despues de que Angular ha inicializado todo el contenido de un directive. Se define para manejar cualquiera tarea de inicialización adicional.
+   5. **ngAfterContentChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de todo el contenido de un directive.
+   6. **ngAfterViewInit**: Se llama después de que Angular haya inicializado completamente la vista de un componente y las vistas secundarias. Se define para manejar cualquiera tarea de inicialización adicional
+   7. **ngAfterViewChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de cambios en la vista de un componente.
+   8. **ngOnDestroy**: Esta es la fase de limpieza justo antes de que Angular destruya el directive/component.
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
