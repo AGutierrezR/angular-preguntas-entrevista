@@ -127,3 +127,42 @@
    | El decorator @View o templateurl / template son obligatorios | Los Directive no usan View                                   |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+8. ### Que es un Template?
+
+   Un templatees una vista HTML donde se muestran los datos uniendo controles a propiedades de un componente Angular. Se pueden guardar las los templatede los componentes en uno de dos lugares. Puedes declararlos en lineausando la propiedad template, o puede definirlo en un fichero HTML separado y vincularlo en el metadatade componente usando el decorador `@Component` con la propiedad `templateUrl`
+
+   Usando inline template:
+
+   ```ts
+   import { Component } from '@angular/core';
+
+   @Component ({
+      selector: 'my-app',
+      template: `
+         <div>
+            <h1>{{title}}</h1>
+            <div>Learn Angular</div>
+         </div>
+      `
+   })
+
+   export class AppComponent {
+      title: string = 'Hello World';
+   }
+   ```
+
+   Usando un fichero separado:
+
+   ```ts
+   import { Component } from '@angular/core';
+
+   @Component ({
+      selector: 'my-app',
+      templateUrl: 'app/app.component.html'
+   })
+
+   export class AppComponent {
+      title: string = 'Hello World';
+   }
+   ```
