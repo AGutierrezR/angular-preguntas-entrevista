@@ -9,6 +9,8 @@
 | 3   | [Que es TypeScript?](#que-es-typescript) |
 | 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular) |
 | 5   | [Que es un Directive?](#que-es-un-directive) |
+| 6   | [Que es un Component?](#que-es-un-Component) |
+| 7   | [Cual es la diferencia entre Components y Directives?](#cual-es-la-diferencia-entre-components-y-directives) |
 
 1. ### Que es Angular?
 
@@ -107,5 +109,21 @@
    	title: string = 'Welcome to Angular world';
    }
    ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+7. ### Cual es la diferencia entre Components y Directives?
+
+   En resumen un componente (`@component`) es un directive con un template.
+
+   Alguna de las diferencias mas sustanciales son:
+
+   | Component                                                    | Directive                                                    |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ |
+   | Para registrar un component se usa el meta-data  `@Component` | Para registrar un directive se usa el meta-data `@Directive` |
+   | Los components normalmente se usan para crear algun Widget en el UI | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
+   | Los Components  se usan para separar una aplicacion en pequeños componentes | Los Directive se usan para diseñar componentes reusables     |
+   | Solo puede haber un componente por elemento DOM              | Se pueden usar muchas directivas por elemento DOM            |
+   | El decorator @View o templateurl / template son obligatorios | Los Directive no usan View                                   |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
