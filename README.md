@@ -2,15 +2,17 @@
 
 ### Tabla de Contenido
 
-| No. | Preguntas                                                                                            |
-| --- | ---------------------------------------------------------------------------------------------------- |
-| 1   | [Que es Angular?](#que-es-angular)                                                                   |
-| 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular) |
-| 3   | [Que es TypeScript?](#que-es-typescript) |
-| 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular) |
-| 5   | [Que es un Directive?](#que-es-un-directive) |
-| 6   | [Que es un Component?](#que-es-un-Component) |
+| No. | Preguntas                                                                                                    |
+| --- | ------------------------------------------------------------------------------------------------------------ |
+| 1   | [Que es Angular?](#que-es-angular)                                                                           |
+| 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular)         |
+| 3   | [Que es TypeScript?](#que-es-typescript)                                                                     |
+| 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular)               |
+| 5   | [Que es un Directive?](#que-es-un-directive)                                                                 |
+| 6   | [Que es un Component?](#que-es-un-Component)                                                                 |
 | 7   | [Cual es la diferencia entre Components y Directives?](#cual-es-la-diferencia-entre-components-y-directives) |
+| 8   | [Que es un Template?](#que-es-un-template) |
+| 9   | [Que es un Module?](#que-es-un-module]) |
 
 1. ### Que es Angular?
 
@@ -118,13 +120,13 @@
 
    Alguna de las diferencias mas sustanciales son:
 
-   | Component                                                    | Directive                                                    |
-   | ------------------------------------------------------------ | ------------------------------------------------------------ |
-   | Para registrar un component se usa el meta-data  `@Component` | Para registrar un directive se usa el meta-data `@Directive` |
-   | Los components normalmente se usan para crear algun Widget en el UI | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
-   | Los Components  se usan para separar una aplicacion en pequeños componentes | Los Directive se usan para diseñar componentes reusables     |
-   | Solo puede haber un componente por elemento DOM              | Se pueden usar muchas directivas por elemento DOM            |
-   | El decorator @View o templateurl / template son obligatorios | Los Directive no usan View                                   |
+   | Component                                                                   | Directive                                                                          |
+   | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+   | Para registrar un component se usa el meta-data  `@Component`               | Para registrar un directive se usa el meta-data `@Directive`                       |
+   | Los components normalmente se usan para crear algun Widget en el UI         | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
+   | Los Components  se usan para separar una aplicacion en pequeños componentes | Los Directive se usan para diseñar componentes reusables                           |
+   | Solo puede haber un componente por elemento DOM                             | Se pueden usar muchas directivas por elemento DOM                                  |
+   | El decorator @View o templateurl / template son obligatorios                | Los Directive no usan View                                                         |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
@@ -166,3 +168,33 @@
       title: string = 'Hello World';
    }
    ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+9. ### Que es un Module?
+
+   Los Modulos son las fronteras lógicas de la aplicación, y la aplicación esta dividida en módulos separados para separar la funcionalidad de la aplicación. Vamos a ver un ejemplo de la raíz **app.module.ts**
+
+   ```ts
+   import { NgModule }      from '@angular/core';
+   import { BrowserModule } from '@angular/platform-browser';
+   import { AppComponent }  from './app.component';
+
+   @NgModule ({
+      imports:      [ BrowserModule ],
+      declarations: [ AppComponent ],
+      bootstrap:    [ AppComponent ],
+      providers: []
+   })
+   export class AppModule { }
+   ```
+
+   El decorator `NgModule` tiene 5 opciones importantes (aparte de todo)
+
+   1. La opction `imports` es usado para importar otras modulos dependientes. El `BrowserModulee` es requerido por defecto en cualquier aplicacion basada en web.
+   2. La opción `declarations` es para definir los componentes en el modulo respectivo
+   3. La opción `bootstrap` le dice a Angular, cuales son los componentes para arrancar la aplicacion
+   4. La opcon `providers` configura el conjunto de injectable objects que estaran disponibles en el injecto para este modulo
+   5. La opción `entryComponents` es el conjunto de componentes que de cargaran dinamicamente en el view
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
