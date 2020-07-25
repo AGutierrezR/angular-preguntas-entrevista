@@ -254,3 +254,85 @@
        ```
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+12. ### Que son los metadatos (metadata)?
+
+    Son usados para decorar clases de modo que pueda configurar el comportamiento esperado de la clase. Los meta datos estan representados por decoradores.
+
+    1. **Decoradores de clases**: (@Component y @NgModule)
+
+       ```ts
+       import { NgModule, Component } from '@angular/core';
+
+       @Component({
+       	selector: 'my-component',
+       	template: '<div>Class decorator</div>',
+       })
+       export class MyComponent {
+       	constructor() {
+       		console.log('Hey I am a component!');
+       	}
+       }
+
+       @NgModule({
+       	imports: [],
+       	declarations: [],
+       })
+       export class MyModule {
+       	constructor() {
+       		console.log('Hey I am a module!');
+       	}
+       }
+       ```
+
+    2. **Decoradores de propiedades**: Usado para propiedades dentro de las clases (ej.: @Input y @Output)
+
+       ```ts
+       import { Component, Input } from '@angular/core';
+
+       @Component({
+       	selector: 'my-component',
+       	template: '<div>Property decorator</div>'
+       })
+
+       export class MyComponent {
+       	@Input()
+       	title: string;
+       }
+       ```
+
+    3. **Decoradores de metodos**: Usado para metodos dentro de la clase (ej.: @HostListener)
+
+       ```ts
+       import { Component, HostListener } from '@angular/core';
+
+       @Component({
+       	selector: 'my-component',
+         template: '<div>Method decorator</div>'
+       })
+       export class MyComponent {
+       	@HostListener('click', ['$event'])
+         onHostClick(event: Event) {
+           // clicked, `event` available
+         }
+       }
+       ```
+
+    4. **Decoradores de parametros**: Usado para parametros dentro del constructor de una clase (ej.: @Inject, Optional)
+
+       ```ts
+       import { Component, Inject } from '@angular/core';
+       import { MyService } from './my-service';
+
+       @Component({
+       	selector: 'my-component',
+       	template: '<div>Parameter decorator</div>'
+       })
+       export class MyComponent {
+       	constructor(@Inject(MyService) myService) {
+       		console.log(myService); // MyService
+       	}
+       }
+       ```
+
+   **[⬆ Ir Arriba](#tabla-de-contenido)**
