@@ -18,7 +18,7 @@
 
 1. ### Que es Angular?
 
-   Angular es una plataforma front-end basada en TypeScript que facilita la creación de aplicaciones web/mobile/desktop. Las características principales de este marco, como las plantillas declarativas, la inyección de dependencias, las herramientas de extremo a extremo y muchas otras características, se utilizan para facilitar el desarrollo.
+   Angular es una plataforma front-end basada en TypeScript que facilita la creación de aplicaciónes web/mobile/desktop. Las características principales de este marco, como las plantillas declarativas, la inyección de dependencias, las herramientas de extremo a extremo y muchas otras características, se utilizan para facilitar el desarrollo.
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
@@ -31,10 +31,10 @@
    | AngularJS                                                 | Angular                                        |
    | --------------------------------------------------------- | ---------------------------------------------- |
    | Esta basado en la arquitectura MVC                        | Esta basadi eb Service/Controller              |
-   | Usa JavaScript para construir la aplicacion               | Usa TypeScript para construir la aplicacion    |
+   | Usa JavaScript para construir la aplicación               | Usa TypeScript para construir la aplicación    |
    | Basado en el concepto de controladores                    | Tiene un enfoque de UI basado en componentes   |
    | No es un framework compatible con dispositivos mobile     | Desarrollado considerando la plataforma mobile |
-   | Dificultades para crear una aplicacion compatible con SEO | Es facil crear una aplicion compatibe con SEO  |
+   | Dificultades para crear una aplicación compatible con SEO | Es facil crear una aplicion compatibe con SEO  |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
@@ -57,14 +57,14 @@
    document.body.innerHTML = greeter(user);
    ```
 
-   El metodo `greeter` solo permite un argumento de tipo string
+   El método `greeter` solo permite un argumento de tipo string
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
 4. ### Cuales son los componentes claves de Angular?
 
    1. Component: Son los bloque de construcción basicos de una aplication angular para controlar las vistas HTML.
-   2. Modules: En angular un modulo es un conjunto de bloques de construcción basicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
+   2. Modules: En angular un módulo es un conjunto de bloques de construcción basicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
    3. Template: Representa una vista en una aplicación Angular
    4. Services: Se usa para crear componentes que pueden ser compartidos a través de toda la aplicación
    5. Metadata: Pueden ser usadas para agregar mas datos a una clase de Angular
@@ -126,7 +126,7 @@
    | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
    | Para registrar un component se usa el meta-data  `@Component`               | Para registrar un directive se usa el meta-data `@Directive`                       |
    | Los components normalmente se usan para crear algun Widget en el UI         | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
-   | Los Components  se usan para separar una aplicacion en pequeños componentes | Los Directive se usan para diseñar componentes reusables                           |
+   | Los Components  se usan para separar una aplicación en pequeños componentes | Los Directive se usan para diseñar componentes reusables                           |
    | Solo puede haber un componente por elemento DOM                             | Se pueden usar muchas directivas por elemento DOM                                  |
    | El decorator @View o templateurl / template son obligatorios                | Los Directive no usan View                                                         |
 
@@ -175,7 +175,7 @@
 
 9. ### Que es un Module?
 
-   Los Modulos son las fronteras lógicas de la aplicación, y la aplicación esta dividida en módulos separados para separar la funcionalidad de la aplicación. Vamos a ver un ejemplo de la raíz **app.module.ts**
+   Los módulos son las fronteras lógicas de la aplicación, y la aplicación esta dividida en módulos separados para separar la funcionalidad de la aplicación. Vamos a ver un ejemplo de la raíz **app.module.ts**
 
    ```ts
    import { NgModule }      from '@angular/core';
@@ -193,24 +193,24 @@
 
    El decorator `NgModule` tiene 5 opciones importantes (aparte de todo)
 
-   1. La opction `imports` es usado para importar otras modulos dependientes. El `BrowserModulee` es requerido por defecto en cualquier aplicacion basada en web.
-   2. La opción `declarations` es para definir los componentes en el modulo respectivo
-   3. La opción `bootstrap` le dice a Angular, cuales son los componentes para arrancar la aplicacion
-   4. La opcon `providers` configura el conjunto de injectable objects que estaran disponibles en el injecto para este modulo
+   1. La opction `imports` es usado para importar otras módulos dependientes. El `BrowserModulee` es requerido por defecto en cualquier aplicación basada en web.
+   2. La opción `declarations` es para definir los componentes en el módulo respectivo
+   3. La opción `bootstrap` le dice a Angular, cuales son los componentes para arrancar la aplicación
+   4. La opcon `providers` configura el conjunto de injectable objects que estaran disponibles en el injecto para este módulo
    5. La opción `entryComponents` es el conjunto de componentes que de cargaran dinamicamente en el view
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
 10. ### Cuales son los lifecycle hooks disponbles?
 
-    Las aplicaciones de Angular van por un conjunto de procesos o tiene ciclos de vida desde inicialización hasta el final de la aplicación.
+    Las aplicaciónes de Angular van por un conjunto de procesos o tiene ciclos de vida desde inicialización hasta el final de la aplicación.
 
     Los ciclos de angular son:
 
     1. **ngOnChanges**: Cuando un valor de una propiedad enlazada a datos cambia, se llama a este método.
     2. **ngOnInit**: Es llamado siempre que ocurra la inicialización de un directive/component despues de que Angular muestra por primera vez las propiedades vinculada a los datos.
-    3. **ngDoCheck**: Este es para la detección y para para actuar sobre los cambios que Angular no puede o no detecta por si solo.
-    4. **ngAfterContentInit**: Es llamado despues de que Angular ha inicializado todo el contenido de un directive. Se define para manejar cualquiera tarea de inicialización adicional.
+    3. **ngDoCheck**: Este es para la detección y para actuar sobre los cambios que Angular no puede o no detecta por si solo.
+    4. **ngAfterContentInit**: Es llamado después de que Angular ha inicializado todo el contenido de un directive. Se define para manejar cualquiera tarea de inicialización adicional.
     5. **ngAfterContentChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de todo el contenido de un directive.
     6. **ngAfterViewInit**: Se llama después de que Angular haya inicializado completamente la vista de un componente y las vistas secundarias. Se define para manejar cualquiera tarea de inicialización adicional
     7. **ngAfterViewChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de cambios en la vista de un componente.
@@ -220,8 +220,8 @@
 
 11. ### Que es enlace de datos (data binding)?
     
-    Data binding es un concepto fundamental en Angular y permite definir comunicacion entre un componente y el DOM, haciendo facil definir aplicationes interactivas sin preocupaciones sobre enviar y recuperar datos. Existen cuatro formas de data binding (dividdo en 3 categorias):
-
+    Data bindinges un concepto fundamental en Angular y permite definir comunicación entre un componente y el DOM, haciendo fácil definir aplicaciónes interactivas sin preocupaciones sobre enviar y recuperar datos. Existen cuatro formas de data binding(dividido en 3 categorías):
+    
     1. **Desde el Component a el DOM**
 
        **Interpolation**: {{ value }}: Añade el valor de una propiedad desde el componente
@@ -239,7 +239,7 @@
 
     2. **Desde el DOM hacia el componente**
 
-       **Event binding**: (event)="function": Cuando un evento especifico del DOM ocurre (ej.: click, change, keyup), se llama a el metodo especificado en el componente
+       **Event binding**: (event)="function": Cuando un evento especifico del DOM ocurre (ej.: click, change, keyup), se llama a el método especificado en el componente
 
        ```html
        <button (click)="logout()"></button>
@@ -247,7 +247,7 @@
 
     3. **Two-way binding**
 
-       **Two-way data binding**: [(ngModel)]="value": Te permite tener un flujo de datos en dos sentidos. Por ejemplo, en el siguiente codigo, ambos el email input del DOM y la propiedad email del componente estan sincronizados
+       **Two-way data binding**: [(ngModel)]="value": Te permite tener un flujo de datos en dos sentidos. Por ejemplo, en el siguiente código, ambos el email input del DOM y la propiedad email del componente están sincronizados
 
        ```html
        <input type="email" [(ngModel)]="user.email">
@@ -257,7 +257,7 @@
 
 12. ### Que son los metadatos (metadata)?
 
-    Son usados para decorar clases de modo que pueda configurar el comportamiento esperado de la clase. Los meta datos estan representados por decoradores.
+    Son usados para decorar clases de modo que pueda configurar el comportamiento esperado de la clase. Los meta datos están representados por decoradores.
 
     1. **Decoradores de clases**: (@Component y @NgModule)
 
@@ -301,7 +301,7 @@
        }
        ```
 
-    3. **Decoradores de metodos**: Usado para metodos dentro de la clase (ej.: @HostListener)
+    3. **Decoradores de métodos**: Usado para métodos dentro de la clase (ej.: @HostListener)
 
        ```ts
        import { Component, HostListener } from '@angular/core';
@@ -318,7 +318,7 @@
        }
        ```
 
-    4. **Decoradores de parametros**: Usado para parametros dentro del constructor de una clase (ej.: @Inject, Optional)
+    4. **Decoradores de parámetros**: Usado para parámetros dentro del constructor de una clase (ej.: @Inject, Optional)
 
        ```ts
        import { Component, Inject } from '@angular/core';
@@ -335,4 +335,32 @@
        }
        ```
 
-   **[⬆ Ir Arriba](#tabla-de-contenido)**
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+13. ### Que es un service?
+
+    Un services es usado cuando se necesita proporcionar una funcionalidad común a varios módulos. Los servicios permiten una mayor separacion de preocupación para la aplicación y una mejor modularidad al permitir extraer funcionalidades en comun de los componentes.
+
+    Creemos un repoService que puede ser usado en varios componentes
+
+    ```ts
+    import { Injectable } from '@angular/core';
+    import { Http } from '@angular/http';
+
+    @Injectable({ // The Injectable decorator is required for dependency injection to work
+      // providedIn option registers the service with a specific NgModule
+      providedIn: 'root',  // This declares the service with the root app (AppModule)
+    })
+    export class RepoService{
+      constructor(private http: Http){
+      }
+
+      fetchAll(){
+        return this.http.get('https://api.github.com/repositories');
+      }
+    }
+    ```
+
+    El servicio anterior utiliza el servicio `Http` como dependencia.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
