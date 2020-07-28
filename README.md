@@ -222,7 +222,7 @@
     
     Data bindinges un concepto fundamental en Angular y permite definir comunicación entre un componente y el DOM, haciendo fácil definir aplicaciónes interactivas sin preocupaciones sobre enviar y recuperar datos. Existen cuatro formas de data binding(dividido en 3 categorías):
     
-    1. **Desde el Component a el DOM**
+    1. **Desde el Component a el DOM (Mostrando datos)** 
 
        **Interpolation**: {{ value }}: Añade el valor de una propiedad desde el componente
 
@@ -237,7 +237,7 @@
        <input type="email" [value]="user.email">
        ```
 
-    2. **Desde el DOM hacia el componente**
+    2. **Desde el DOM hacia el componente (Reaccionando a eventos)**
 
        **Event binding**: (event)="function": Cuando un evento especifico del DOM ocurre (ej.: click, change, keyup), se llama a el método especificado en el componente
 
@@ -245,7 +245,7 @@
        <button (click)="logout()"></button>
        ```
 
-    3. **Two-way binding**
+    3. **Two-way binding (Combinacion de ambas)**
 
        **Two-way data binding**: [(ngModel)]="value": Te permite tener un flujo de datos en dos sentidos. Por ejemplo, en el siguiente código, ambos el email input del DOM y la propiedad email del componente están sincronizados
 
