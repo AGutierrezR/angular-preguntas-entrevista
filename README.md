@@ -406,3 +406,24 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+17. ### Cual es el propósito de async pipe?
+
+    El AsyncPipe se suscribe a un observable o promesa y retorna el ultimo valor ha emitido. Cuando un nuevo valor es emitido, el pipe marca el componente para detectar cambios.
+
+    Tomemos como ejemplo un time observable que se actualiza constantemente (cada dos segundos)
+
+    ```ts
+    @Component({
+      selector: 'async-observable-pipe',
+      template: `<div><code>observable|async</code>:
+           Time: {{ time | async }}</div>`
+    })
+    export class AsyncObservablePipeComponent {
+      time = new Observable(observer =>
+        setInterval(() => observer.next(new Date().toString()), 2000)
+      );
+    }
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
