@@ -383,3 +383,9 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+15. ### Que es Dependency Injection en Angular?
+
+    Dependency Injection (DI), es un muy importante patrón de diseño de aplicaciónes en el que una clase pide dependencias de una fuente externas en vez de crear por si misma. Angular viene como su propio framework DI, para solucionar dependencias (servicios u objetos que una clase necesita para realizar su función). Se puede tener servicios que dependen de otros servicios atrevés de toda la aplicación.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
