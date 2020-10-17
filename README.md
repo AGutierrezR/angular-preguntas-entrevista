@@ -2,19 +2,36 @@
 
 ### Tabla de Contenido
 
-| No. | Preguntas                                                                                                    |
-| --- | ------------------------------------------------------------------------------------------------------------ |
-| 1   | [Que es Angular?](#que-es-angular)                                                                           |
-| 2   | [Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular)         |
-| 3   | [Que es TypeScript?](#que-es-typescript)                                                                     |
-| 4   | [Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular)               |
-| 5   | [Que es un Directive?](#que-es-un-directive)                                                                 |
-| 6   | [Que es un Component?](#que-es-un-Component)                                                                 |
-| 7   | [Cual es la diferencia entre Components y Directives?](#cual-es-la-diferencia-entre-components-y-directives) |
-| 8   | [Que es un Template?](#que-es-un-template)                                                                   |
-| 9   | [Que es un Module?](#que-es-un-module)                                                                       |
-| 10  | [Cuales son los lifecycle hooks disponbles?](#cuales-son-los-lifecycle-hooks-disponbles)                     |
-| 11  | [Que es enlace de datos (data binding)?](#que-es-enlace-de-datos-(data-binding))                             |
+| No.  | Preguntas                                                    |
+| ---- | ------------------------------------------------------------ |
+| 1    | [¿Que es Angular?](#que-es-angular)                          |
+| 2    | [¿Cual es la diferencia entre AngujarJS y Angular?](#cual-es-la-diferencia-entre-angujarjs-y-angular) |
+| 3    | [¿Que es TypeScript?](#que-es-typescript)                    |
+| 4    | [¿Cuales son los componentes claves de Angular?](#cuales-son-los-componentes-claves-de-angular) |
+| 5    | [¿Que es un Directive?](#que-es-un-directive)                |
+| 6    | [¿Que es un Component?](#que-es-un-Component)                |
+| 7    | [¿Cual es la diferencia entre Components y Directives?](#cual-es-la-diferencia-entre-components-y-directives) |
+| 8    | [¿Que es un Template?](#que-es-un-template)                  |
+| 9    | [¿Que es un Module?](#que-es-un-module)                      |
+| 10   | [¿Cuales son los lifecycle hooks disponibles?](#cuales-son-los-lifecycle-hooks-disponibles) |
+| 11   | [¿Que es enlace de datos o data binding?](#que-es-enlace-de-datos-o-data-binding) |                                              |
+| 12   | [¿Que son los metadatos o metadata?](#que-son-los-metadatos-o-metadata?) |
+| 13   | [¿Que es un service?](#que-es-un-service?)                   |
+| 14   | [¿Cual es la diferencia entre el constructor y ngOnInit?](#cual-es-la-diferencia-entre-el-constructor-y-ngOnInit?) |
+| 15   | [¿Que es Dependency Injection en Angular?](#que-es-Dependency-Injection-en-Angular?) |
+| 16   | [¿Cuales son los tipos de Directives que existen?](#cuales-son-los-tipos-de-Directives-que-existen) |
+| 17   | [¿Cual es el propósito de async pipe?](#cual-es-el-propósito-de-async-pipe?) |
+| 18   | [¿Cual es el propósito del directive ngFor?](#cual-es-el-propósito-del-directive-ngFor?) |
+| 19   | [¿Cual es el propósito del directive ngIf?](#cual-es-el-propósito-del-directive-ngIf?) |
+| 20   | [¿Que es interpolación?](#que-es-interpolación?)             |
+| 21   | [¿Que son template expressions?](#que-son-template-expressions?) |
+| 22   | [¿Que son template statements?](#que-son-template-statements?) |
+| 23   | [¿Como se categorizan los tipos de data binding?](#como-se-categorizan-los-tipos-de-data-binding?) |
+| 24   | [¿Que son los Pipes?](#que-son-los-Pipes?)                   |
+| 25   | [¿Que son Pipes Parametrizados?](#que-son-Pipes-Parametrizados?) |
+| 26   | [¿Como se encadenan los pipes?](#como-se-encadenan-los-pipes?) |
+| 27   | [¿Que es un custom pipe?](#que-es-un-custom-pipe?)           |
+| 28   | [Ejemplo de custom pipe](#ejemplo-de-custom-pipe)            |
 
 1. ### Que es Angular?
 
