@@ -485,3 +485,23 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+22. ### Que son template statements?
+
+    Un template statement responde a un event provocado por binding target, como un elemento, componente o directive. Los template statements aparecen entre comillas al lado derecho del símbolo `=` como `(event)="statement"`.
+
+    Por ejemplo, un click event en un botón
+
+    ```html
+    <button (click)="editProfile()">Edit Profile</button>
+    ```
+
+    La siguientes JavaScript expressions no son permitidas:
+
+    1. `new`
+    2. Incremento o decremento (`++` y `--`)
+    3. Operaciones de asignación (`=`, `+=`, `-=`)
+    4. Operadores bitwise (`|` y `&`)
+    5. Los operadores de template expressions
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
