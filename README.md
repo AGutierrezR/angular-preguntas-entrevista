@@ -539,3 +539,23 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+25. ### Que son Pipes Parametrizados?
+
+    Un pipe puede aceptar cualquier numero parámetros opciones para afinar el output. El parametrized pipe puede ser crear declarando el nombre del pipe seguido de dos puntos (`:`) y luego el valor del parámetro. Si el pipe acepta varios parámetros, se separan con dos puntos (`:`)
+
+    ```ts
+    import { Component } from '@angular/core';
+    
+    @Component({
+      selector: 'app-birthday',
+      template: `<p>Birthday is {{ birthday | date:'dd/MM/yyyy'}}</p>` // 18/06/1987
+    })
+    export class BirthdayComponent {
+      birthday = new Date(1987, 6, 18);
+    }
+    ```
+
+    **Nota:** El valor de parámetro puede ser cualquier template expression valido, tales como un string literal o una propiedad de componente.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
