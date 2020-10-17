@@ -579,3 +579,29 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+27. ### Que es un custom pipe?
+
+    Aparte de los que vienen con Angular, podemos escribir nuestros propios pipes con las siguientes características
+
+    1. Un pipe es una clase decorada con un pipe metadata `@Pipe`, la cual se importa desde el core de la librería de angular.
+
+       ```ts
+       @Pipe({name: 'myCustomPipe'})
+       ```
+
+    2. La clase pipe implementa un interface **PipeTransform** --- que acepta un valor input seguido de parámetros opcionales y retorna el valor transformado. La estructura de **PipeTransform** seria la siguiente
+
+       ```ts
+       interface PipeTransform {
+         transform(value: any, ...args: any[]): any
+       }
+       ```
+
+    3. El decorador `@Pipe` te permite definir el nombre del pipe que se usara dentro de las template expressions. Debe ser un JavaScript identifier valido.
+
+       ```ts
+       template: `{{someInputValue | myCustomPipe: someOtherValue}}`
+       ```
+
+       **[⬆ Ir Arriba](#tabla-de-contenido)**
+
