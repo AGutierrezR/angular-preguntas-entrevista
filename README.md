@@ -364,3 +364,22 @@
     El servicio anterior utiliza el servicio `Http` como dependencia.
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+14. ### Cual es la diferencia entre el constructor y ngOnInit?
+
+    Las clases de TypeScript tiene por defecto un método llamado `constructor` el cual es usado para propósitos de inicialización. A diferencia de `ngOnInit` que es un método especifico de Angular, usado específicamente para definir Angular Bindings. Aunque el `constructor` es el primero en ser llamado, es preferible dejar los Angular binding en el método `ngOnInit`. Para usar `ngOnInit` debemos implementar `OnInit`.
+
+    ```ts
+    export class App implements OnInit{
+    	constructor(){
+    		//called first time before the ngOnInit()
+      }
+    
+      ngOnInit(){
+    		//called after the constructor and called  after the first ngOnChanges()
+      }
+    }
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
