@@ -521,3 +521,21 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+24. ### Que son los Pipes?
+
+    Un pipe acepta datos como entrada y la transforma al diseño que deseamos. Por ejemplo, vamos a tomar un pipe para transformar la propiedad `birthday` de un componente en una dato mas human-friendly
+
+    ```ts
+    import { Component } from '@angular/core';
+    
+    @Component({
+      selector: 'app-birthday',
+      template: `<p>Birthday is {{ birthday | date }}</p>`
+    })
+    export class BirthdayComponent {
+      birthday = new Date(1987, 6, 18); // June 18, 1987
+    }
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
