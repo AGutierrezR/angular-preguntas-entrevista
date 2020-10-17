@@ -505,3 +505,19 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+23. ### Como se categorizan los tipos de data binding?
+
+    Los binding types puede agruparse ene 3 categorías distinguido por la dirección en que los datos fluyen.
+
+    1. source-to-view
+    2. view-to-source
+    3. view-to-source-to-view
+
+    | Data direction                    | Syntax                                                       | Type                                             |
+    | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------ |
+    | From the source-to-view (One-way) | 1. {{expression}} <br />2. [target]="expression" <br/> 3. bind-target="expression" | Interpolation, Property, Attribute, Class, Style |
+    | From view-to-source (One-way)     | 1. (target)="statement" <br/>2. on-target="statement"        | Event                                            |
+    | View-to-source-to-view (Two-way)  | 1. [(target)]="expression" <br/>2. bindon-target="expression" | Two-way                                          |
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
