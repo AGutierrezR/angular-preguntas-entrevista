@@ -559,3 +559,23 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+26. ### Como se encadenan los pipes?
+
+    Se pueden encadenar varios pipes en combinaciones potencialmente útiles. Si usamos el ejemplo anterior sobre birthday
+
+    ```ts
+    import { Component } from '@angular/core';
+    
+    @Component({
+      selector: 'app-birthday',
+      template: `
+    		<p>Birthday is {{  birthday | date:'fullDate' | uppercase}} </p>` 
+      	// THURSDAY, JUNE 18, 1987
+    })
+    export class BirthdayComponent {
+      birthday = new Date(1987, 6, 18);
+    }
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
