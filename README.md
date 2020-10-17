@@ -389,3 +389,20 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+16. ### Cuales son los tipos de Directives que existen?
+
+    Existen tres tipos de Directives
+
+    1. **Components**: Directive con templates
+    2. **Structural directive**: Cambian la diagramación del DOM agregando un quitando elementos del DOM
+    3. **Attribute directives**: Cambian la apariencia o comportamiento de un componente, elemento, u otro directive.
+
+    En la siguiente tabla hay una diferencia entre Structural directive y Attribute directives
+
+    | Structural Directives                                        | Attribute Directives                                         |
+    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | Luce como un atributo HTML normal pero con un `*` adelante   | Lucen como un atributo HTML normal (posiblemente con un databinding o event binding) |
+    | Afecta un area completa del DOM (elementos son agregados o quitados) | Solo afectan/cambian el elemento en donde son agregados      |
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
