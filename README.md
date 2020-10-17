@@ -468,3 +468,20 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+21. ### Que son template expressions?
+
+    Un template expression produce un valor similar a cualquier JavaScript expression. Angular ejecuta la expresión y le asigna a una propiedad de un binding target. El target podría ser un elemento HTML, un componente, o un directive. En el property binding, un template expression aparece del lado derecho del símbolo `=` en comillas de las siguiente manera `[property]="expression"`. En interpolation syntax, el template expression es envuelta en doble llaves. Por ejemplo, en la siguiente interpolación, el template expression es {{username}}
+
+    ```html
+    <h3>{{username}}, welcome to Angular</h3>
+    ```
+
+    Las siguientes JavaScript expression están prohibidas en template expressions:
+
+    1. Asignaciones (`=`, `+=`, `-=`, `...`)
+    2. `new`
+    3. Chaining expressions con `;` o `,`
+    4. Incremento o decremento (`++` y `--`)
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
