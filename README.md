@@ -427,3 +427,15 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+18. ### Cual es el propósito del directive ngFor?
+
+    En Angular se usa ngFor en un template para mostrar cada item de una lista. Por ejemplo, si se quiere iterar en la lista de usuarios
+
+    ```html
+    <li *ngFor="let user of users">
+      {{ user }}
+    </li>
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
