@@ -439,3 +439,15 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+19. ### Cual es el propósito del directive ngIf?
+
+    En ocaciones la aplicación necesita msotrar una vista o una parte de la vista solo si ocurre una circunstancia especifica. En Angular ngIf inserta o quita un elemento basandose en una condicion verdadera/falsa. Por ejemplo, si queremos mostrar un mensaje cuando la edad del usuario es mayor a 18.
+
+    ```html
+    <p *ngIf="user.age > 18">You are not eligible for student pass!</p>
+    ```
+
+    **Nota:** Angualr no esta mostrando y escondiendo el mensaje. Esta agregando y quitando el elemento `<p>` del DOM. Esto mejora rendimiento, en especial con grandes proyectos con muchos data binding.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
