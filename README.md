@@ -451,3 +451,20 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
+20. ### Que es interpolación?
+
+    Es una sintaxis especial que Angular convierte en property binding. Esta una alternativa conveniente a property binding. Esta representado por doble llaves `{{ }}`. El texto entre las llaves normalmente es el nombre de una propiedad de componente. Angular reemplaza ese nombre con la string del valor que la propiedad del componente correspondiente.
+
+    Por ejemplo:
+
+    ```html
+    <h3>
+      {{title}}
+      <img src="{{url}}" style="height:30px">
+    </h3>
+    ```
+
+    Angular evalúa las propiedades `title` y `url` y llena los espacios en blanco, primero mostrando el title y luego el URL.
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
+
