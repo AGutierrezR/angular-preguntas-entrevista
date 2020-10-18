@@ -16,7 +16,7 @@
 | 10   | [¿Cuales son los lifecycle hooks disponibles?](#cuales-son-los-lifecycle-hooks-disponibles) |
 | 11   | [¿Que es enlace de datos o data binding?](#que-es-enlace-de-datos-o-data-binding) |                                              |
 | 12   | [¿Que son los metadatos o metadata?](#que-son-los-metadatos-o-metadata) |
-| 13   | [¿Que es un service?](#que-es-un-service?)                   |
+| 13   | [¿Que es un service?](#que-es-un-service)                   |
 | 14   | [¿Cual es la diferencia entre el constructor y ngOnInit?](#cual-es-la-diferencia-entre-el-constructor-y-ngOnInit) |
 | 15   | [¿Que es Dependency Injection en Angular?](#que-es-Dependency-Injection-en-Angular) |
 | 16   | [¿Cuales son los tipos de Directives que existen?](#cuales-son-los-tipos-de-Directives-que-existen) |
@@ -32,14 +32,21 @@
 | 26   | [¿Como se encadenan los pipes?](#como-se-encadenan-los-pipes) |
 | 27   | [¿Que es un custom pipe?](#que-es-un-custom-pipe)           |
 | 28   | [Ejemplo de custom pipe](#ejemplo-de-custom-pipe)            |
+| 29   | [¿Que es HttpClient y sus beneficios?](#Que-es-HttpClient-y-sus-beneficios) |
+| 30   | [¿Como se usa HttpClient con un ejemplo?](#Como-se-usa-HttpClient-con-un-ejemplo) |
+| 31   | [¿Como se puede leer el full response?](#Como-se-puede-leer-el-full-response) |
+| 32   | [¿Que son los Http Interceptors?](#que-son-los-http-interceptors) |
+| 33   | [¿Cuales son las aplicaciónes para los HTTP Interceptos?](#Cuales-son-las-aplicaciónes-para-los-HTTP-Interceptos) |
+| 34   | [¿Angular puede soportar varios interceptors?](#Angular-puede-soportar-varios-interceptors) |
+| 35   | [¿Como se puede usar interceptor para toda la aplicación?](#Como-se-puede-usar-interceptor-para-toda-la-aplicación) |
 
-1. ### Que es Angular?
+1. ### ¿Que es Angular?
 
    Angular es una plataforma front-end basada en TypeScript que facilita la creación de aplicaciónes web/mobile/desktop. Las características principales de este marco, como las plantillas declarativas, la inyección de dependencias, las herramientas de extremo a extremo y muchas otras características, se utilizan para facilitar el desarrollo.
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-2. ### Cual es la diferencia entre AngujarJS y Angular?
+2. ### ¿Cual es la diferencia entre AngujarJS y Angular?
 
    Angular esta basado completamente en componentes en donde una aplicación es un árbol de componentes individuales
 
@@ -55,7 +62,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-3. ### Que es TypeScript?
+3. ### ¿Que es TypeScript?
 
    TypeScript es un subconjunto de JavaScript creado por Microsoft que agregar optional types, classes, async/await, y muchas otras características, y compila JavaScript plano. Angular esta construido completamente en TypeScript y se usa como lenguaje primario. Se puede instalar globalmente
 
@@ -78,7 +85,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-4. ### Cuales son los componentes claves de Angular?
+4. ### ¿Cuales son los componentes claves de Angular?
 
    1. Component: Son los bloque de construcción básicos de una aplicación angular para controlar las vistas HTML.
    2. Modules: En angular un módulo es un conjunto de bloques de construcción básicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
@@ -88,7 +95,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-5. ### Que es un Directive?
+5. ### ¿Que es un Directive?
 
    Los directive añaden comportamiento un elementos existentes en el DOM o a una instancia de componente existente
 
@@ -111,7 +118,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-6. ### Que es un Component?
+6. ### ¿Que es un Component?
 
    Los Components son los bloques de construcción de UI mas básicos en una aplicación Angular que formaba un árbol de componentes Angular. Estos componentes son un subconjunto de los directives. A diferencia de los directive, los componentes siempre tendrán una plantilla y solo se puede crear una instancia de un componente por elemento en un template. Aquí un simple ejemplo de un componente de Angular:
 
@@ -133,7 +140,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-7. ### Cual es la diferencia entre Components y Directives?
+7. ### ¿Cual es la diferencia entre Components y Directives?
 
    En resumen un componente (`@component`) es un directive con un template.
 
@@ -149,7 +156,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-8. ### Que es un Template?
+8. ### ¿Que es un Template?
 
    Un template es una vista HTML donde se muestran los datos uniendo controles a propiedades de un componente Angular. Se pueden guardar las los template de los componentes en uno de dos lugares. Puedes declararlos en linea usando la propiedad template, o puede definirlo en un fichero HTML separado y vincularlo en el metadatade componente usando el decorador `@Component` con la propiedad `templateUrl`
 
@@ -190,7 +197,7 @@
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-9. ### Que es un Module?
+9. ### ¿Que es un Module?
 
    Los módulos son las fronteras lógicas de la aplicación, y la aplicación esta dividida en módulos separados para separar la funcionalidad de la aplicación. Vamos a ver un ejemplo de la raíz **app.module.ts**
 
@@ -400,13 +407,13 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-15. ### Que es Dependency Injection en Angular?
+15. ### ¿Que es Dependency Injection en Angular?
 
     Dependency Injection (DI), es un muy importante patrón de diseño de aplicaciónes en el que una clase pide dependencias de una fuente externas en vez de crear por si misma. Angular viene como su propio framework DI, para solucionar dependencias (servicios u objetos que una clase necesita para realizar su función). Se puede tener servicios que dependen de otros servicios atrevés de toda la aplicación.
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-16. ### Cuales son los tipos de Directives que existen?
+16. ### ¿Cuales son los tipos de Directives que existen?
 
     Existen tres tipos de Directives
 
@@ -423,7 +430,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-17. ### Cual es el propósito de async pipe?
+17. ### ¿Cual es el propósito de async pipe?
 
     El AsyncPipe se suscribe a un observable o promesa y retorna el ultimo valor ha emitido. Cuando un nuevo valor es emitido, el pipe marca el componente para detectar cambios.
 
@@ -444,7 +451,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-18. ### Cual es el propósito del directive ngFor?
+18. ### ¿Cual es el propósito del directive ngFor?
 
     En Angular se usa ngFor en un template para mostrar cada item de una lista. Por ejemplo, si se quiere iterar en la lista de usuarios
 
@@ -456,7 +463,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-19. ### Cual es el propósito del directive ngIf?
+19. ### ¿Cual es el propósito del directive ngIf?
 
     En ocaciones la aplicación necesita msotrar una vista o una parte de la vista solo si ocurre una circunstancia especifica. En Angular ngIf inserta o quita un elemento basandose en una condicion verdadera/falsa. Por ejemplo, si queremos mostrar un mensaje cuando la edad del usuario es mayor a 18.
 
@@ -468,7 +475,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-20. ### Que es interpolación?
+20. ### ¿Que es interpolación?
 
     Es una sintaxis especial que Angular convierte en property binding. Esta una alternativa conveniente a property binding. Esta representado por doble llaves `{{ }}`. El texto entre las llaves normalmente es el nombre de una propiedad de componente. Angular reemplaza ese nombre con la string del valor que la propiedad del componente correspondiente.
 
@@ -485,7 +492,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-21. ### Que son template expressions?
+21. ### ¿Que son template expressions?
 
     Un template expression produce un valor similar a cualquier JavaScript expression. Angular ejecuta la expresión y le asigna a una propiedad de un binding target. El target podría ser un elemento HTML, un componente, o un directive. En el property binding, un template expression aparece del lado derecho del símbolo `=` en comillas de las siguiente manera `[property]="expression"`. En interpolation syntax, el template expression es envuelta en doble llaves. Por ejemplo, en la siguiente interpolación, el template expression es {{username}}
 
@@ -502,7 +509,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-22. ### Que son template statements?
+22. ### ¿Que son template statements?
 
     Un template statement responde a un event provocado por binding target, como un elemento, componente o directive. Los template statements aparecen entre comillas al lado derecho del símbolo `=` como `(event)="statement"`.
 
@@ -522,7 +529,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-23. ### Como se categorizan los tipos de data binding?
+23. ### ¿Como se categorizan los tipos de data binding?
 
     Los binding types puede agruparse ene 3 categorías distinguido por la dirección en que los datos fluyen.
 
@@ -538,7 +545,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-24. ### Que son los Pipes?
+24. ### ¿Que son los Pipes?
 
     Un pipe acepta datos como entrada y la transforma al diseño que deseamos. Por ejemplo, vamos a tomar un pipe para transformar la propiedad `birthday` de un componente en una dato mas human-friendly
 
@@ -556,7 +563,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-25. ### Que son Pipes Parametrizados?
+25. ### ¿Que son Pipes Parametrizados?
 
     Un pipe puede aceptar cualquier numero parámetros opciones para afinar el output. El parametrized pipe puede ser crear declarando el nombre del pipe seguido de dos puntos (`:`) y luego el valor del parámetro. Si el pipe acepta varios parámetros, se separan con dos puntos (`:`)
 
@@ -576,7 +583,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-26. ### Como se encadenan los pipes?
+26. ### ¿Como se encadenan los pipes?
 
     Se pueden encadenar varios pipes en combinaciones potencialmente útiles. Si usamos el ejemplo anterior sobre birthday
 
@@ -596,7 +603,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-27. ### Que es un custom pipe?
+27. ### ¿Que es un custom pipe?
 
     Aparte de los que vienen con Angular, podemos escribir nuestros propios pipes con las siguientes características
 
@@ -621,4 +628,30 @@
        ```
 
        **[⬆ Ir Arriba](#tabla-de-contenido)**
+
+28. ### Ejemplo de custom pipe
+
+    Se puede crear un pipe personalizado y reusable para transforma valores existentes. Por ejemplo, el siguiente custom pipe entrar el tamaño del archivo en función de una extension
+
+    ```ts
+    import { Pipe, PipeTransform } from '@angular/core';
+    
+    @Pipe({name: 'customFileSizePipe'})
+    export class FileSizePipe implements PipeTransform {
+      transform(size: number, extension: string = 'MB'): string {
+        return (size / (1024 * 1024)).toFixed(2) + extension;
+      }
+    }
+    ```
+
+    Ahora se puede usar este pipe en el siguiente template expression
+
+    ```js
+    template: `
+    	<h2>Find the size of a file</h2> 
+    	<p>Size: {{288966 | customFileSizePipe: 'GB'}}</p> 
+    `
+    ```
+
+    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
