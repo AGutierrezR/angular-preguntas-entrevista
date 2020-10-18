@@ -15,22 +15,22 @@
 | 9    | [¿Que es un Module?](#que-es-un-module)                      |
 | 10   | [¿Cuales son los lifecycle hooks disponibles?](#cuales-son-los-lifecycle-hooks-disponibles) |
 | 11   | [¿Que es enlace de datos o data binding?](#que-es-enlace-de-datos-o-data-binding) |                                              |
-| 12   | [¿Que son los metadatos o metadata?](#que-son-los-metadatos-o-metadata?) |
+| 12   | [¿Que son los metadatos o metadata?](#que-son-los-metadatos-o-metadata) |
 | 13   | [¿Que es un service?](#que-es-un-service?)                   |
-| 14   | [¿Cual es la diferencia entre el constructor y ngOnInit?](#cual-es-la-diferencia-entre-el-constructor-y-ngOnInit?) |
-| 15   | [¿Que es Dependency Injection en Angular?](#que-es-Dependency-Injection-en-Angular?) |
+| 14   | [¿Cual es la diferencia entre el constructor y ngOnInit?](#cual-es-la-diferencia-entre-el-constructor-y-ngOnInit) |
+| 15   | [¿Que es Dependency Injection en Angular?](#que-es-Dependency-Injection-en-Angular) |
 | 16   | [¿Cuales son los tipos de Directives que existen?](#cuales-son-los-tipos-de-Directives-que-existen) |
-| 17   | [¿Cual es el propósito de async pipe?](#cual-es-el-propósito-de-async-pipe?) |
-| 18   | [¿Cual es el propósito del directive ngFor?](#cual-es-el-propósito-del-directive-ngFor?) |
-| 19   | [¿Cual es el propósito del directive ngIf?](#cual-es-el-propósito-del-directive-ngIf?) |
-| 20   | [¿Que es interpolación?](#que-es-interpolación?)             |
-| 21   | [¿Que son template expressions?](#que-son-template-expressions?) |
-| 22   | [¿Que son template statements?](#que-son-template-statements?) |
-| 23   | [¿Como se categorizan los tipos de data binding?](#como-se-categorizan-los-tipos-de-data-binding?) |
-| 24   | [¿Que son los Pipes?](#que-son-los-Pipes?)                   |
-| 25   | [¿Que son Pipes Parametrizados?](#que-son-Pipes-Parametrizados?) |
-| 26   | [¿Como se encadenan los pipes?](#como-se-encadenan-los-pipes?) |
-| 27   | [¿Que es un custom pipe?](#que-es-un-custom-pipe?)           |
+| 17   | [¿Cual es el propósito de async pipe?](#cual-es-el-propósito-de-async-pipe) |
+| 18   | [¿Cual es el propósito del directive ngFor?](#cual-es-el-propósito-del-directive-ngFor) |
+| 19   | [¿Cual es el propósito del directive ngIf?](#cual-es-el-propósito-del-directive-ngIf) |
+| 20   | [¿Que es interpolación?](#que-es-interpolación)             |
+| 21   | [¿Que son template expressions?](#que-son-template-expressions) |
+| 22   | [¿Que son template statements?](#que-son-template-statements) |
+| 23   | [¿Como se categorizan los tipos de data binding?](#como-se-categorizan-los-tipos-de-data-binding) |
+| 24   | [¿Que son los Pipes?](#que-son-los-Pipes)                   |
+| 25   | [¿Que son Pipes Parametrizados?](#que-son-Pipes-Parametrizados) |
+| 26   | [¿Como se encadenan los pipes?](#como-se-encadenan-los-pipes) |
+| 27   | [¿Que es un custom pipe?](#que-es-un-custom-pipe)           |
 | 28   | [Ejemplo de custom pipe](#ejemplo-de-custom-pipe)            |
 
 1. ### Que es Angular?
@@ -47,11 +47,11 @@
 
    | AngularJS                                                 | Angular                                        |
    | --------------------------------------------------------- | ---------------------------------------------- |
-   | Esta basado en la arquitectura MVC                        | Esta basadi eb Service/Controller              |
+   | Esta basado en la arquitectura MVC                        | Esta basado eb Service/Controller              |
    | Usa JavaScript para construir la aplicación               | Usa TypeScript para construir la aplicación    |
    | Basado en el concepto de controladores                    | Tiene un enfoque de UI basado en componentes   |
    | No es un framework compatible con dispositivos mobile     | Desarrollado considerando la plataforma mobile |
-   | Dificultades para crear una aplicación compatible con SEO | Es facil crear una aplicion compatibe con SEO  |
+   | Dificultades para crear una aplicación compatible con SEO | Es fácil crear una aplicación compatible con SEO  |
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
@@ -80,8 +80,8 @@
 
 4. ### Cuales son los componentes claves de Angular?
 
-   1. Component: Son los bloque de construcción basicos de una aplication angular para controlar las vistas HTML.
-   2. Modules: En angular un módulo es un conjunto de bloques de construcción basicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
+   1. Component: Son los bloque de construcción básicos de una aplicación angular para controlar las vistas HTML.
+   2. Modules: En angular un módulo es un conjunto de bloques de construcción básicos como components, directives, services, etc. Una aplicación esta dividida en piezas lógicas y cada pieza de código se denomina "module" que realiza una tarea
    3. Template: Representa una vista en una aplicación Angular
    4. Services: Se usa para crear componentes que pueden ser compartidos a través de toda la aplicación
    5. Metadata: Pueden ser usadas para agregar mas datos a una clase de Angular
@@ -142,7 +142,7 @@
    | Component                                                                   | Directive                                                                          |
    | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
    | Para registrar un component se usa el meta-data  `@Component`               | Para registrar un directive se usa el meta-data `@Directive`                       |
-   | Los components normalmente se usan para crear algun Widget en el UI         | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
+   | Los components normalmente se usan para crear algún Widget en el UI         | Los Directive se usan para agregar comportamiento a elementos existentes en el DOM |
    | Los Components  se usan para separar una aplicación en pequeños componentes | Los Directive se usan para diseñar componentes reusables                           |
    | Solo puede haber un componente por elemento DOM                             | Se pueden usar muchas directivas por elemento DOM                                  |
    | El decorator @View o templateurl / template son obligatorios                | Los Directive no usan View                                                         |
@@ -151,7 +151,7 @@
 
 8. ### Que es un Template?
 
-   Un templatees una vista HTML donde se muestran los datos uniendo controles a propiedades de un componente Angular. Se pueden guardar las los templatede los componentes en uno de dos lugares. Puedes declararlos en lineausando la propiedad template, o puede definirlo en un fichero HTML separado y vincularlo en el metadatade componente usando el decorador `@Component` con la propiedad `templateUrl`
+   Un template es una vista HTML donde se muestran los datos uniendo controles a propiedades de un componente Angular. Se pueden guardar las los template de los componentes en uno de dos lugares. Puedes declararlos en linea usando la propiedad template, o puede definirlo en un fichero HTML separado y vincularlo en el metadatade componente usando el decorador `@Component` con la propiedad `templateUrl`
 
    Usando inline template:
 
@@ -210,32 +210,32 @@
 
    El decorator `NgModule` tiene 5 opciones importantes (aparte de todo)
 
-   1. La opction `imports` es usado para importar otras módulos dependientes. El `BrowserModulee` es requerido por defecto en cualquier aplicación basada en web.
+   1. La opción `imports` es usado para importar otras módulos dependientes. El `BrowserModulee` es requerido por defecto en cualquier aplicación basada en web.
    2. La opción `declarations` es para definir los componentes en el módulo respectivo
    3. La opción `bootstrap` le dice a Angular, cuales son los componentes para arrancar la aplicación
-   4. La opcon `providers` configura el conjunto de injectable objects que estaran disponibles en el injecto para este módulo
-   5. La opción `entryComponents` es el conjunto de componentes que de cargaran dinamicamente en el view
+   4. La opción `providers` configura el conjunto de injectable objects que estarán disponibles en el injector para este módulo
+   5. La opción `entryComponents` es el conjunto de componentes que de cargaran dinámicamente en el view
 
    **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-10. ### Cuales son los lifecycle hooks disponbles?
+10. ### ¿Cuales son los lifecycle hooks disponibles?
 
     Las aplicaciónes de Angular van por un conjunto de procesos o tiene ciclos de vida desde inicialización hasta el final de la aplicación.
 
     Los ciclos de angular son:
 
-    1. **ngOnChanges**: Cuando un valor de una propiedad enlazada a datos cambia, se llama a este método.
-    2. **ngOnInit**: Es llamado siempre que ocurra la inicialización de un directive/component despues de que Angular muestra por primera vez las propiedades vinculada a los datos.
+    1. **ngOnChanges**: Cuando un valor de una propiedad de entrada (input) vinculada cambia, se llama a este método.
+    2. **ngOnInit**: Es llamado siempre que ocurra la inicialización de un directive/component después de que Angular muestra por primera vez las propiedades vinculada a los datos.
     3. **ngDoCheck**: Este es para la detección y para actuar sobre los cambios que Angular no puede o no detecta por si solo.
-    4. **ngAfterContentInit**: Es llamado después de que Angular ha inicializado todo el contenido de un directive. Se define para manejar cualquiera tarea de inicialización adicional.
-    5. **ngAfterContentChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de todo el contenido de un directive.
+    4. **ngAfterContentInit**: Es llamado después de que el contenido (ng-content) es proyectado en la vista. Se define para manejar cualquiera tarea de inicialización adicional.
+    5. **ngAfterContentChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de todo el contenido (ng-content) de un directive.
     6. **ngAfterViewInit**: Se llama después de que Angular haya inicializado completamente la vista de un componente y las vistas secundarias. Se define para manejar cualquiera tarea de inicialización adicional
     7. **ngAfterViewChecked**: Se llama después de que la detección de cambios predeterminada haya completado la comprobación de cambios en la vista de un componente.
     8. **ngOnDestroy**: Esta es la fase de limpieza justo antes de que Angular destruya el directive/component.
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-11. ### Que es enlace de datos (data binding)?
+11. ### ¿Que es enlace de datos o data binding?
     
     Data bindinges un concepto fundamental en Angular y permite definir comunicación entre un componente y el DOM, haciendo fácil definir aplicaciónes interactivas sin preocupaciones sobre enviar y recuperar datos. Existen cuatro formas de data binding(dividido en 3 categorías):
     
@@ -272,7 +272,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-12. ### Que son los metadatos (metadata)?
+12. ### ¿Que son los metadatos o metadata?
 
     Son usados para decorar clases de modo que pueda configurar el comportamiento esperado de la clase. Los meta datos están representados por decoradores.
 
@@ -354,7 +354,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-13. ### Que es un service?
+13. ### ¿Que es un service?
 
     Un services es usado cuando se necesita proporcionar una funcionalidad común a varios módulos. Los servicios permiten una mayor separacion de preocupación para la aplicación y una mejor modularidad al permitir extraer funcionalidades en comun de los componentes.
 
@@ -382,7 +382,7 @@
 
     **[⬆ Ir Arriba](#tabla-de-contenido)**
 
-14. ### Cual es la diferencia entre el constructor y ngOnInit?
+14. ### ¿Cual es la diferencia entre el constructor y ngOnInit?
 
     Las clases de TypeScript tiene por defecto un método llamado `constructor` el cual es usado para propósitos de inicialización. A diferencia de `ngOnInit` que es un método especifico de Angular, usado específicamente para definir Angular Bindings. Aunque el `constructor` es el primero en ser llamado, es preferible dejar los Angular binding en el método `ngOnInit`. Para usar `ngOnInit` debemos implementar `OnInit`.
 
